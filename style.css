@@ -1,0 +1,79 @@
+/* Full-Screen Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnVqMjNwZzBjOWplZnN2NHpvMGNwcXZvbDVsYWNiemo5OHVjbjJjayZlcD12MV9naWZzX3NlYXJjaCZjdD1n/85NbGstFaElEO1Wusd/giphy.gif') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Container Styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #ff4d4d;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1) rotate(10deg);
+    background-color: #ff3333;
+}
+
+/* Styling for flood of "Yes" buttons */
+.yes-flood {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    animation: floatingYes 3s infinite ease-in-out;
+}
+
+/* Floating Yes animation */
+@keyframes floatingYes {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
